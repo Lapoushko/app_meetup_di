@@ -15,6 +15,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             App_meetup_diTheme {
+                //Здесь вам нужно исправить
                 val repository = CarRepositoryImpl()
                 val useCase = SubscribeGetCarUseCaseImpl(
                     repository = repository
