@@ -2,7 +2,6 @@ package com.example.app_meetup_di.presentation
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -10,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.app_meetup_di.presentation.model.CarView
 
 /**
@@ -17,7 +17,7 @@ import com.example.app_meetup_di.presentation.model.CarView
  */
 @Composable
 fun MainScreen(
-    viewModel: MainViewModel
+    viewModel: MainViewModel = hiltViewModel()
 ) {
     val car = viewModel.car.collectAsState().value
     Scaffold { innerPadding ->
